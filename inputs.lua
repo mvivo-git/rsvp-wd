@@ -537,7 +537,6 @@ end
 -- ------------------------------------------------------------------------------------------------------
 
 Inputs.ParseInput = function(mode, shorter)
-Ashita.Chat.Echo('ParseInput. '.. mode .. ' ' .. tostring(CreateMultiple.ShorterNames))
     local now = os.time()
     local baseDate = Inputs.GetDateTable()
     local input = Inputs.GetMultiple()
@@ -548,18 +547,14 @@ Ashita.Chat.Echo('ParseInput. '.. mode .. ' ' .. tostring(CreateMultiple.Shorter
     for line in (input .. '\n'):gmatch('(.-)\n') do
         local valid, name, timestamp, relSec, day = Inputs.ParseLine(line)
 		
-
         if valid and name then
 
             -- Check if name is a known HNM
 			local hnmName, isHnm, hnmType = Utils.Canonicalize_HNM(name)
             if shorter then
-			
 				hnmName, isHnm, hnmType = Utils.Canonicalize_Shorten_HNM(name)
---				local hnmName, isHnm, hnmType = Utils.Canonicalize_Shorten_HNM(name)
 			end
 
-Ashita.Chat.Echo('name '.. hnmName .. ' hnMType ' .. hnmType )
             if isHnm then
                 local lineRel = Utils.Get_Relative_Seconds(line)
 
