@@ -160,6 +160,7 @@ Create.Display = function()
         Window.SetScaling(Config.GetScale())
         UI.PopStyleColor(1)
     end
+	File.Save()
 end
 
 -- ------------------------------------------------------------------------------------------------------

@@ -52,7 +52,6 @@ CreateMultiple.Display = function()
 
 			if (UI.Checkbox("Short names", {CreateMultiple.ShorterNames})) then
 				CreateMultiple.ShorterNames = not CreateMultiple.ShorterNames
-				Ashita.Chat.Echo('Clicked. '.. tostring(CreateMultiple.ShorterNames))
 			end
 	
             if UI.Button('Add') then
@@ -66,6 +65,7 @@ CreateMultiple.Display = function()
         Window.SetScaling(Config.GetScale())
         UI.PopStyleColor(1)
     end
+	File.Save()
 end
 
 -- ------------------------------------------------------------------------------------------------------
