@@ -71,6 +71,8 @@ Create.Buttons.Schedule = function(type, pass, name, date, time, customInfo)
                 local futureMinutes = (timestamp - os.time()) / 60
 
                 Timers.Start(name, futureMinutes)
+				File.Save()
+				Ashita.Chat.Echo('saving file. (single)')
             end
         end
 
@@ -85,6 +87,8 @@ Create.Buttons.Schedule = function(type, pass, name, date, time, customInfo)
 
                     Timers.Start(timerName, futureMinutes + (10 * i), name)
                 end
+				File.Save()
+				Ashita.Chat.Echo('saving file. (single)')
             end
         end
 
@@ -99,6 +103,8 @@ Create.Buttons.Schedule = function(type, pass, name, date, time, customInfo)
 
                     Timers.Start(timerName, futureMinutes + (60 * i), name)
                 end
+				File.Save()
+				Ashita.Chat.Echo('saving file. (single)')
             end
         end
 
@@ -114,6 +120,8 @@ Create.Buttons.Schedule = function(type, pass, name, date, time, customInfo)
                     Timers.Start(timerName, futureMinutes + (customInfo.gap * i), name)
                 end
             end
+			File.Save()
+			Ashita.Chat.Echo('saving file. (single)')
         end
     end
 

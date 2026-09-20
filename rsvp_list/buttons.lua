@@ -13,7 +13,7 @@ end
 -- Displays a create multiple new button.
 -- ------------------------------------------------------------------------------------------------------
 local createMultipleNew = function()
-    if UI.SmallButton(' ++ ') then
+    if UI.SmallButton('++ ') then
         Config.Toggle.CreateMultipleWindowVisibility()
     end
 end
@@ -22,7 +22,7 @@ end
 -- Shows the toggle group mode button.
 -- ------------------------------------------------------------------------------------------------------
 local toggleGroupMode = function()
-    if UI.SmallButton('Group') then
+    if UI.SmallButton('Grp') then
         RSVP.List.Group_Mode = not RSVP.List.Group_Mode
     end
 end
@@ -31,10 +31,10 @@ end
 -- Shows the toggle timestamp button.
 -- ------------------------------------------------------------------------------------------------------
 local toggleTimestamp = function()
-    local caption = 'Timer'
+    local caption = 'Tmr'
 
     if RSVP.List.Show_Countdown then
-        caption = 'Stamp'
+        caption = 'Stmp'
     end
 
     if UI.SmallButton(caption) then
@@ -46,10 +46,10 @@ end
 -- Shows the toggle filter button.
 -- ------------------------------------------------------------------------------------------------------
 local toggleFilter = function()
-    local caption = 'Filt: OFF'
+    local caption = 'F:OFF'
 
     if RSVP.List.Apply_Filter then
-        caption = string.format('Filt: (%d)', List.Filtered)
+        caption = string.format('F:(%d)', List.Filtered)
     end
 
     UI.PushID('Filter')

@@ -24,8 +24,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ]]
 
 addon.author  = 'Metra, Saraji, Nei'
-addon.name    = 'rsvp'
-addon.version = '2026-08-09'
+addon.name    = 'rsvp-wd'
+addon.version = '21/09/2026'
 
 Settings = require('settings')
 UI       = require('imgui')

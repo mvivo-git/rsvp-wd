@@ -17,6 +17,7 @@ CreateMultiple.Type = {
     King   = 2,
     Wyrm   = 3,
     Custom = 4,
+	Toau   = 5,
 }
 
 require('rsvp_creation_multiple.buttons')
@@ -56,16 +57,18 @@ CreateMultiple.Display = function()
 	
             if UI.Button('Add') then
                 Inputs.ParseInput('creation', CreateMultiple.ShorterNames)
+				File.Save()
+				Ashita.Chat.Echo('saving file. (multiple)')
             end
 
             Window.SetLegacyScaling(Config.GetScale())
             UI.End()
+			
         end
 
         Window.SetScaling(Config.GetScale())
         UI.PopStyleColor(1)
     end
-	File.Save()
 end
 
 -- ------------------------------------------------------------------------------------------------------
@@ -100,7 +103,12 @@ CreateMultiple.Schedule = function(type, name, date, time, customInfo, day)
             local timerName = name .. ' (' .. tostring(i + 1) .. '/25)'
             Timers.Start(timerName, futureMinutes + (60 * i), name)
         end
-
+	elseif type == CreateMultiple.Type.Toau then
+		local futureMinutes = (timestamp - os.time()) / 60
+		for i = 0, 4, 1 do
+			local timerName = name .. ' (' .. tostring(i + 1) .. '/5)'
+			Timers.Start(timerName, futureMinutes + (360 * i), name)
+		end
     elseif type == CreateMultiple.Type.Custom then
         local futureMinutes = (timestamp - os.time()) / 60
         for i = 0, customInfo.count, 1 do

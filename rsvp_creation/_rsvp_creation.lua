@@ -150,7 +150,7 @@ Create.Display = function()
             if UI.BeginTabBar('Reminder Types', Window.Tab_Flags) then
                 makeRelativeTimer()
                 makeSpecificTimer()
-                UI.EndTabBar()
+                UI.EndTabBar()				
             end
 
             Window.SetLegacyScaling(Config.GetScale())
@@ -160,7 +160,7 @@ Create.Display = function()
         Window.SetScaling(Config.GetScale())
         UI.PopStyleColor(1)
     end
-	File.Save()
+	--File.Save()
 end
 
 -- ------------------------------------------------------------------------------------------------------

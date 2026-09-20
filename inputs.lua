@@ -547,6 +547,7 @@ Inputs.ParseInput = function(mode, shorter)
     for line in (input .. '\n'):gmatch('(.-)\n') do
         local valid, name, timestamp, relSec, day = Inputs.ParseLine(line)
 		
+
         if valid and name then
 
             -- Check if name is a known HNM
@@ -554,7 +555,6 @@ Inputs.ParseInput = function(mode, shorter)
             if shorter then
 				hnmName, isHnm, hnmType = Utils.Canonicalize_Shorten_HNM(name)
 			end
-
             if isHnm then
                 local lineRel = Utils.Get_Relative_Seconds(line)
 

@@ -22,9 +22,9 @@ local HNM_ALIASES = {
     ["jormungand"]               = { "Jormungand",       CreateMultiple.Type.Wyrm },
 
     -- TOAU HNMs
-    ["khimaira"]                 = { "Khimaira",       CreateMultiple.Type.Wyrm },
-    ["cerberus"]                 = { "Cerberus",       CreateMultiple.Type.Wyrm },
-    ["hydra"]                    = { "Hydra",          CreateMultiple.Type.Wyrm },
+    ["khimaira"]                 = { "Khimaira",       CreateMultiple.Type.Toau },
+    ["cerberus"]                 = { "Cerberus",       CreateMultiple.Type.Toau },
+    ["hydra"]                    = { "Hydra",          CreateMultiple.Type.Toau },
 
     ["gulool ja ja"]             = { "Gulool Ja Ja",    CreateMultiple.Type.Normal },
     ["medusa"]                   = { "Medusa",          CreateMultiple.Type.Normal },
@@ -60,9 +60,9 @@ local HNM_ALIASES_SHORT = {
     ["jormungand"]               = { "Jorm",       CreateMultiple.Type.Wyrm },
 
     -- TOAU HNMs
-    ["khimaira"]                 = { "Khim",       CreateMultiple.Type.Wyrm },
-    ["cerberus"]                 = { "Cerb",       CreateMultiple.Type.Wyrm },
-    ["hydra"]                    = { "Hydra",          CreateMultiple.Type.Wyrm },
+    ["khimaira"]                 = { "Khim",       CreateMultiple.Type.Toau },
+    ["cerberus"]                 = { "Cerb",       CreateMultiple.Type.Toau },
+    ["hydra"]                    = { "Hydra",          CreateMultiple.Type.Toau },
 
     ["gulool ja ja"]             = { "Gulool Ja Ja",    CreateMultiple.Type.Normal },
     ["medusa"]                   = { "Medusa",          CreateMultiple.Type.Normal },
